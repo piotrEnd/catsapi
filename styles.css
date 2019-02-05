@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Courgette');
+
+body {
+   background-color: #616161;
+   color: rgb(233, 233, 233);
+   font-family: 'Comfortaa', cursive;
+}
+
+.container {
+   display: flex;
+   position: relative;
+   overflow: hidden;
+}
+
+.results {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.results > div {
+   margin: 2vw;
+   width: 90%;
+   padding: 10px;
+}
+
+select {
+   position: sticky;
+   top: 0;
+   text-align: center;
+   cursor: pointer;
+}
+
+/* #temperament option:checked {
+   background: orange;
+   color: orange;
+} */
+
+.headers {
+   font-size: 1rem;
+   position: absolute;
+   top: 5%;
+   left: 40%;
+   line-height: 0.5;
+   text-shadow: -1px -1px 0px #000000, 3px 3px 0px #1b1b1b, 6px 6px 0px #212121;
+}
+
+#breed {
+   font-size: 2rem;
+   font-family: 'Courgette', cursive;
+}
+.origin,
+.breed {
+   margin: 0;
+   line-height: 1.2em;
+   color: orange;
+}
+
+.temp {
+   font-size: 0.8rem;
+   text-align: right;
+}
+
+img {
+   margin: auto;
+   max-width: 100%;
+   padding: 1px;
+   border: 1px solid #021a40;
+   background-color: orange;
+}
+
+hr {
+   background-color: orange; /* firefox, opera */
+   border-color: orange; /* chrome, safari */
+   color: orange; /* ie7+ */
+}
+
+footer {
+   text-align: right;
+   padding: 10px;
+}
+
+footer a {
+   text-decoration: none;
+   color: orange;
+}
+
+::selection {
+   color: rgb(233, 233, 233);
+   background: orange;
+}
+
+@media (min-width: 800px) {
+   .results > div {
+      padding: 5px;
+      width: calc(50% - 4vw - 10px);
+   }
+
+   .headers {
+      font-size: 2rem;
+      line-height: 0.6;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+   }
+}
+
+@media (min-width: 1200px) {
+   .results {
+      justify-content: space-around;
+   }
+
+   .results > div {
+      padding: 0;
+      width: calc(33% - 4vw);
+   }
+
+   .headers {
+      font-size: 2.5rem;
+   }
+}
+
+@media (min-width: 1400px) {
+   .results {
+      justify-content: center;
+   }
+   .results > div {
+      width: calc(25% - 4vw);
+   }
+}
